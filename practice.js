@@ -297,14 +297,9 @@ methodCollection.logHello();
   //Code Here
 
 function MakePerson(name, birthday, ssn){
-   return function() {
-     var newPerson = {
-      name = "name",
-      birthday = "birthday",
-      ssn = "ssn"
-
-    };
-  }
+this.name = name;
+this.birthday = birthday;
+this.ssn = ssn;
 }
     
 
@@ -320,9 +315,17 @@ function MakePerson(name, birthday, ssn){
   //Code Here
   
   function MakeCard(name, address, number, date) {
-    function
+    return newCard = {
+    this.name = name;
+    this. address = address;
+    this.number = number;
+    this.date = date
+    };
 
   }
+
+
+  
   
   
 //NEXT PROBLEM
