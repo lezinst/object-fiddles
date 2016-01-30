@@ -297,9 +297,11 @@ methodCollection.logHello();
   //Code Here
 
 function MakePerson(name, birthday, ssn){
-this.name = name;
-this.birthday = birthday;
-this.ssn = ssn;
+  return {
+  name: name,
+  birthday: birthday,
+  ssn: ssn
+  }
 }
     
 
@@ -315,11 +317,11 @@ this.ssn = ssn;
   //Code Here
   
   function MakeCard(name, address, number, date) {
-    return newCard = {
-    this.name = name;
-    this. address = address;
-    this.number = number;
-    this.date = date
+    return {
+    name: name,
+    address:address,
+    number: number,
+    date:date
     };
 
   }
@@ -338,5 +340,17 @@ this.ssn = ssn;
 */
 
   //Code Here
+
+  function bindCard(user, card){
+    var boundObj = {};
+    for (var key in user){
+      boundObj[key] = user[key];
+    }
+    for (var key in card){
+      boundObj[key] = card[key];
+
+    }
+    return boundObj;
+  }
 
 
